@@ -8,6 +8,6 @@ const app = express()
 
 app.use(express.json())
 app.use(routes)
+ 
 
-
-app.listen(3000), () => console.log('[SERVIDOR] Iniciado com sucesso na porta 3000.')
+app.listen(3000, ( ) => console.log('[🔥 SERVIDOR] Servidor iniciado na porta 3000'))

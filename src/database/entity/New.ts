@@ -1,4 +1,5 @@
-import { Column, CreateDateColumn, Entity, ManyToMany, PrimaryGeneratedColumn, Timestamp, UpdateDateColumn } from 'typeorm'
+import { Column, CreateDateColumn, Entity, JoinColumn, ManyToMany, ManyToOne, PrimaryGeneratedColumn, Timestamp, UpdateDateColumn } from 'typeorm'
+import Category from './Category';
 
 @Entity('news')
 export default class New {
@@ -18,5 +19,6 @@ export default class New {
     @UpdateDateColumn()
     updated_At: Date
 
+   
     
 }
