@@ -2,7 +2,7 @@ import { Column, CreateDateColumn, Entity, JoinColumn, ManyToMany, ManyToOne, Pr
 import Category from './Category';
 
 @Entity('news')
-export default class New {
+export default class News {
     @PrimaryGeneratedColumn('increment')
     new_id: number;
 
@@ -19,6 +19,7 @@ export default class New {
     @UpdateDateColumn()
     updated_At: Date
 
-   
-    
+    @ManyToOne(() => Category, (category) => category.news)
+    category: Category
+
 }
